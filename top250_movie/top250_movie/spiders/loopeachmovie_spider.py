@@ -19,6 +19,8 @@ class loopeachmovieSpider(scrapy.Spider):
 		'length' :response.css('div.title_wrapper').css('div.subtext').css('time::text').extract() 
 		'genre': response.css('div.title_wrapper').css('div.subtext').css('span::text').extract(),
         	'writer':response.css('div.plot_summary').css('div.credit_summary_item').css('a span::text').extract(),
+		'stars':response.css('div.credit_summary_item')[2].css('span a span::text').extract(),
+		'director':response.css('div.credit_summary_item')[0].css('a span::text').extract(),
         	'Description':response.css('div.plot_summary').css('div.summary_text').css('div::text').extract()
 
 		}
