@@ -4,7 +4,7 @@ import os
 class loopeachmovieSpider(scrapy.Spider):
 	name = 'allmovie_IMDB'
 
-	index = range(1,3,1)
+	index = range(1,78,1)
 	start_urls = list()
 	for page in index:
     		#start_urls.append('http://www.imdb.com/list/ls057823854/?start=' + str(page) + '&view=detail&sort=listorian:asc')
